@@ -14,27 +14,65 @@ Works great for quickly cleaning your Downloads or Desktop.
 
 ## Install / Build
 
-This repo uses Go modules.
+You can either use package managers (Scoop, Homebrew) or build from source. This repo uses Go modules.
+
+### Scoop (Windows)
+
+Add the bucket and install Janitor:
+
+```bash
+scoop bucket add biohazard786 https://github.com/BioHazard786/scoop-bucket.git
+scoop install biohazard786/janitor
+```
+
+Upgrade when new versions are released:
+
+```bash
+scoop update
+scoop update janitor
+```
+
+### Homebrew (macOS / Linux with Homebrew)
+
+Tap the repository and install the cask:
+
+```bash
+brew tap BioHazard786/tap
+brew install --cask janitor
+```
+
+Upgrade:
+
+```bash
+brew upgrade janitor
+```
+
+If you prefer building from source instead of using the cask:
+
+```bash
+git clone https://github.com/BioHazard786/Janitor.git
+cd Janitor
+go build -o janitor ./cmd/janitor
+./janitor -v
+```
+
+### Build from source (generic)
 
 - Prerequisite: Go (the module declares `go 1.25.3`; building with the latest stable Go is fine).
-
-Build locally:
 
 ```bash
 # from the repository root
 go build -o janitor ./cmd/janitor
-
-# run it
 ./janitor -v
 ```
 
-Or run without building a binary first:
+Run without building a binary first:
 
 ```bash
 go run ./cmd/janitor -i
 ```
 
-Note: `go install` with a module path requires the module to be published; since this module path is `janitor` (local), prefer the build commands above.
+Note: `go install` with a module path requires the module to be published; since the module path here is local (`janitor`), prefer the build commands above.
 
 ## Usage
 
