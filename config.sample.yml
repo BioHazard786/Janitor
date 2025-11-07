@@ -1,0 +1,38 @@
+# This is the configuration file for Janitor.
+# You can place this file in the directory you run it from,
+# or in ~/.config/janitor/config.yml for global settings.
+
+# Folders are the destination directories.
+# The values are a list of file extensions (case-insensitive).
+
+folders:
+  Videos:
+    - .mp4
+    - .mov
+    - .avi
+    - .mkv
+  Music:
+    - .mp3
+    - .wav
+    - .flac
+  Pictures:
+    - .jpg
+    - .jpeg
+    - .png
+    - .gif
+  Illustrations: # This is a custom folder
+    - .psd
+    - .ai
+  Documents:
+    - .pdf
+    - .docx
+    - .doc
+    - .txt
+    - .md
+  Archives:
+    - .zip
+    - .tar
+    - .gz
+  Other:
+    - .exe
+    - .dmg
